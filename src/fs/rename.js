@@ -9,7 +9,7 @@ const errorMessage = 'FS operation failed';
 
 const rename = async () => {
   try {
-    fs.rename(oldFileName, newFileName);
+    await fs.rename(oldFileName, newFileName);
   } catch(e) {
     throw new Error(errorMessage);
   }
